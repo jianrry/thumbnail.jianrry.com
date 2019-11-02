@@ -9,7 +9,7 @@ const filesToCache = [
   '/js/push2.js',
   '/fonts/Roboto-Medium-webfont.eot',
   '/fonts/Roboto-Medium-webfont.woff',
-  '/fonts/Roboto-Medium-webfont.svg#RobotoMedium.svg',
+  '/fonts/Roboto-Medium-webfont.svg',
   '/images/favicon.ico',
   '/images/background.jpg',
   '/images/ipad-optimised.png',
