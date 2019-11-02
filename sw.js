@@ -7,6 +7,7 @@ let cacheName = 'first-pwa-app-1'
 let filesToCache = [
   '/index.html',
   '/css/style.css',
+  '/js/jquery-1.11.1.min.js',
   '/js/getform.js',
   '/fonts/Roboto-Medium-webfont.eot',
   '/fonts/Roboto-Medium-webfont.woff',
