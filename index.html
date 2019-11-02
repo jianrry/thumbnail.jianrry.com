@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <title>在线生成网站缩略图</title>
+    <meta name="keywords" content="缩略图，网站缩略图，多设备网站缩略图，在线生成多设备网站缩略图">
+    <meta name="description" content="本站能够在短短的几秒钟内，通过您所输入的网站地址，在线生成该网站的多设备缩略图。">
+    <meta content="在线生成网站多设备缩略图" name="description">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- chapter01/public/index.html -->
+    <!-- 对 manifest.json 的应用 -->
+    <link rel="manifest" href="./manifest.json">
+
+    <script type="text/javascript" src="js/getform.js"></script>
+
+    <!-- service worker -->
+    <script>
+        // 判断浏览器是否支持 Service Worker
+        if ('serviceWorker' in navigator) {
+            // 在 load 事件触发后注册 Service Worker，确保 Service Worker 的注册不会影响首屏速度
+            window.addEventListener('load', function () {
+                // 注册 Service Worker
+                navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                // 注册成功
+                console.log('ServiceWorker registration successful with scope: ', registration.scope)
+                }).catch(function (err) {
+                // 注册失败 :(
+                console.warn('ServiceWorker registration failed: ', err)
+                })
+            })
+        }
+    </script>
+
+</head>
+
+<body class="ami">
+    <div class="wrapper">
+        <section class="display">
+            <div class="mobile ui-draggable">
+                <div class="trim">
+                    <iframe src="https://jianrry.com" id="mobile">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="tablet ui-draggable">
+                <div class="trim">
+                    <iframe src="https://jianrry.com" id="tablet">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="laptop ui-draggable">
+                <div class="trim">
+                    <iframe src="https://jianrry.com" id="laptop">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="desktop ui-draggable">
+                <div class="trim">
+                    <iframe src="https://jianrry.com" id="desktop">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="url">
+        <div class="ad">
+        </div>
+        <h1></h1>
+        <form id="rwdform">
+            <input type="text" placeholder="请输入网站地址" class="button1" id="url_input" value="https://jianrry.com">
+            <input type="button" class="button" value="GO" name="submit" onclick="getURL()">
+    </form></section>
+
+    <div class="carbon-poweredby">
+        <p class="copyright">Copyright © 2019 Author: <a href="https://shansan.top" target="_blank"><b>Shan San</b></a> Modify by <a href="https://jianrry.com" target="_blank"><b>Jianrry</b></a></p>
+    </div>
+</body>
+</html>
