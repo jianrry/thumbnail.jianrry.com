@@ -4,10 +4,10 @@
 var bp = document.createElement('script');
 var curProtocol = window.location.protocol.split(':')[0];
 if (curProtocol === 'https'){
- bp.src = 'push1.js';
+ bp.src = 'js/push1.js';
 }
 else{
-bp.src = 'push2.js';
+bp.src = 'js/push2.js';
 }
 var s = document.getElementsByTagName("script")[0];
 s.parentNode.insertBefore(bp, s);
