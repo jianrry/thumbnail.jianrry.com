@@ -9,6 +9,8 @@ let filesToCache = [
   '/css/style.css',
   '/js/jquery-1.11.1.min.js',
   '/js/getform.js',
+  '/js/push1.js',
+  '/js/push2.js',
   '/fonts/Roboto-Medium-webfont.eot',
   '/fonts/Roboto-Medium-webfont.woff',
   '/fonts/Roboto-Medium-webfont.svg#RobotoMedium.svg',
