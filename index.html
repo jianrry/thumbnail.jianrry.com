@@ -26,11 +26,11 @@
             window.addEventListener('load', function () {
                 // 注册 Service Worker
                 navigator.serviceWorker.register('/sw.js').then(function (registration) {
-                // 注册成功
-                console.log('ServiceWorker registration successful with scope: ', registration.scope)
+                    // 注册成功
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope)
                 }).catch(function (err) {
-                // 注册失败 :(
-                console.warn('ServiceWorker registration failed: ', err)
+                    // 注册失败 :(
+                    console.warn('ServiceWorker registration failed: ', err)
                 })
             })
         }
@@ -78,10 +78,13 @@
         <form id="rwdform">
             <input type="text" placeholder="请输入网站地址" class="button1" id="url_input" value="https://jianrry.com">
             <input type="button" class="button" value="GO" name="submit" onclick="getURL()">
-    </form></section>
+        </form>
+    </section>
 
     <div class="carbon-poweredby">
-        <p class="copyright">Copyright © 2019 Author: <a href="https://shansan.top" target="_blank"><b>Shan San</b></a> Modify by <a href="https://jianrry.com" target="_blank"><b>Jianrry</b></a></p>
+        <p class="copyright">Copyright © 2019 Author: <a href="https://shansan.top" target="_blank"><b>Shan San</b></a>
+            Modify by <a href="https://jianrry.com" target="_blank"><b>Jianrry</b></a></p>
     </div>
 </body>
+
 </html>
